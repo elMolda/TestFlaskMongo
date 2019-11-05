@@ -1,4 +1,6 @@
 venv/
-globals.py
 __pycache__/
 .vscode/
+dataBase/__pycache__/
+dataBase/globals.py
+models/__pycache__/
