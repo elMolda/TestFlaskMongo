@@ -1,0 +1,4 @@
+venv/
+globals.py
+__pycache__/
+.vscode/
