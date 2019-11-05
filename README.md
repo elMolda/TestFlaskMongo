@@ -1,5 +1,6 @@
 # TestFlaskMongo
 Test Flask REST with MongoDB Atlas as DaaS
+
 In the dataBase folder are the scripts for calling specific database functionality.
 In the models folder are the data classes for the API.
 app.py holds the API endpoints.
