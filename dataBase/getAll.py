@@ -1,16 +1,15 @@
-from pymongo import MongoClient
-from .globals import connStr
+from .globals import *
 from models.User import User
+from mongoengine import *
 
-client = MongoClient(connStr) 
+'''client = MongoClient(connStr) 
 db = client.get_database('UsersTestDB')
-collection = db.Users
+collection = db.Users'''
+
+connect(db=dbName,host=connStr)
 
 def getAllUsers():
-    usrsLst = list(collection.find())
-    sndUsrsLst = []
-    for usr in usrsLst:
-        addUsr = User(usr["name"], usr["lastName"], usr["age"])
-        sndUsrsLst.append(addUsr.toDict())
-    return sndUsrsLst
-    
+    usrs = []
+    for usr in User.objects():
+        usrs.append(usr.to_json())
+    return usrs
