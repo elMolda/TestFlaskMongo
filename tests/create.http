@@ -2,8 +2,8 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Ultimo",
-    "lastName": "Last",
-    "email": "thisis_last@gmail.com",
-    "age": "20"
+    "name": "Ultimo1",
+    "lastName": "Last1",
+    "email": "thisi1s_last@gmail.com",
+    "age": "21"
 }
