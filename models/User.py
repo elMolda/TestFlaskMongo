@@ -1,12 +1,7 @@
-class User:
-    def __init__(self, name, lastName, age):
-        self.name = name
-        self.lastName = lastName
-        self.age = int(age)
+from mongoengine import *
 
-    def toDict(self):
-        dict = { 'name': self.name,
-                 'lastName': self.lastName,
-                 'age': self.age
-                }
-        return dict
+class User(Document):
+    email = EmailField(required=True)
+    name = StringField(max_length=50)
+    lastName = StringField(max_length=50)
+    age = IntField(min_value=0)
